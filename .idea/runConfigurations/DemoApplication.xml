@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="Ships" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.ships.demo.DemoApplication" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <method />
+  </configuration>
+</component>
