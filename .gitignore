@@ -11,9 +11,10 @@
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
+workspace.xml
+usage.statistics.xml
+tasks.xml
 *.iws
-*.iml
 *.ipr
 
 ### NetBeans ###
