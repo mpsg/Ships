@@ -3,7 +3,14 @@ function signInButton() {
 }
 
 function signOutButton() {
-    var a;
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function () {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+            console.log(xmlHttp.responseText)
+        }
+    }
+    xmlHttp.open("GET", "/login", true);
+    xmlHttp.send(null);
 }
 
 function singlePlayerButton() {
