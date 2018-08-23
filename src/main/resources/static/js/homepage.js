@@ -9,7 +9,8 @@ function signOutButton() {
             console.log(xmlHttp.responseText)
         }
     }
-    xmlHttp.open("GET", "/login", true);
+    var message = "/test?&param1=5&param2=2";
+    xmlHttp.open("GET", message, true);
     xmlHttp.send(null);
 }
 
