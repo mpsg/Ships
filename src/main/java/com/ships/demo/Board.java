@@ -34,4 +34,33 @@ public class Board {
             return false;
         }
     }
+    @Override
+    public String toString() {
+        StringBuilder strBldr = new StringBuilder();
+        strBldr.append("  ");
+        for (int i = 0; i < this.board.length; i++) {
+            StringBuilder tmp = new StringBuilder();
+            tmp.append(i);
+            tmp.append(' ');
+            tmp.setLength(2);
+            strBldr.append(tmp);
+        }
+        strBldr.append('\n');
+        for (int i = 0; i < this.board.length; i++) {
+            StringBuilder tmp = new StringBuilder();
+            tmp.append(i);
+            tmp.append(' ');
+            tmp.setLength(2);
+            strBldr.append(tmp);
+            for (int j = 0; j < this.board[0].length; j++) {
+                if (this.board[i][j] == null) {
+                    strBldr.append("  ");
+                } else {
+                    strBldr.append("X ");
+                }
+            }
+            strBldr.append('\n');
+        }
+        return strBldr.toString();
+    }
 }

@@ -7,6 +7,6 @@ public class PositionedShipPlacer extends ShipPlacer {
         super(board);
     }
     public void placePositionedShips(Vector<PositionedShip> ships) {
-
+        //TODO implement method
     }
 }
