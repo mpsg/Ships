@@ -21,8 +21,8 @@ public class Board {
     public int shootAt(int x, int y) {
         if (this.board[x][y] == null) {
             return 0;
-        } else if (!this.board[x][y].makeHit()) {
-            this.ships.remove(this.board[x][y]);
+        } else if (this.board[x][y].isShipDestroyedAfterHit()) {
+            this.ships.remove(this.board[x][y].getShip());
             return 2;
         } else {
             return 1;
