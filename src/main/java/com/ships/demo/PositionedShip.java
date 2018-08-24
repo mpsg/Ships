@@ -22,4 +22,5 @@ public class PositionedShip {
     public int getOrientation() {
         return this.orientation;
     }
+    public Ship getShip() { return this.ship; }
 }

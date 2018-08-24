@@ -7,6 +7,11 @@ public class PositionedShipPlacer extends ShipPlacer {
         super(board);
     }
     public void placePositionedShips(Vector<PositionedShip> ships) {
-        //TODO implement method
+        for (PositionedShip ship : ships) {
+            int x = ship.getX();
+            int y = ship.getY();
+            int orientation = ship.getOrientation();
+            this.placeShip(ship.getShip(), x, y, orientation);
+        }
     }
 }
