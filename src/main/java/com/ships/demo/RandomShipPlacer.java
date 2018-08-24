@@ -114,6 +114,7 @@ public class RandomShipPlacer extends ShipPlacer {
                     if (this.board[shipX][shipY - fieldsToCheck] != null) return false;
                     break;
             }
+            fieldsToCheck--;
         }
         return true;
     }
