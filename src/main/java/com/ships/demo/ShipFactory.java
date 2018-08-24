@@ -13,7 +13,7 @@ public class ShipFactory {
         Vector<Ship> ships = new Vector<>(this.producesShips);
         int shipsLeft = this.producesShips;
         while (shipsLeft > 0) {
-            int shipSize = shipsLeft + this.smallestShipSize;
+            int shipSize = shipsLeft + this.smallestShipSize - 1;
             ships.add(new Ship(shipSize));
             shipsLeft--;
         }
