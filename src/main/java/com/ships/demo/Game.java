@@ -1,6 +1,6 @@
 package com.ships.demo;
 
-import java.util.Vector;
+import java.util.ArrayList;
 
 public class Game {
     private int gameID;
@@ -12,7 +12,7 @@ public class Game {
     public String testComputerBoardCreation(int boardSize, int shipsNum, int smallestShipSize) {
         Board board = new Board(boardSize);
         ShipFactory shipFactory = new ShipFactory(shipsNum, smallestShipSize);
-        Vector<Ship> ships = shipFactory.makeShips();
+        ArrayList<Ship> ships = shipFactory.makeShips();
         board.insertShipsAtRandom(ships);
         return board.toString();
     }

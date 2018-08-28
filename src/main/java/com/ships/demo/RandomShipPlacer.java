@@ -1,6 +1,6 @@
 package com.ships.demo;
 
-import java.util.Vector;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class RandomShipPlacer extends ShipPlacer {
@@ -8,7 +8,7 @@ public class RandomShipPlacer extends ShipPlacer {
     public RandomShipPlacer(BoardField[][] board) {
         super(board);
     }
-    public void placeShipsAtRandom(Vector<Ship> ships) {
+    public void placeShipsAtRandom(ArrayList<Ship> ships) {
        for (Ship ship : ships) {
            boolean shipPlaced;
            do {

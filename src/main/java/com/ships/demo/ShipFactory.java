@@ -1,6 +1,6 @@
 package com.ships.demo;
 
-import java.util.Vector;
+import java.util.ArrayList;
 
 public class ShipFactory {
     private int producesShips;
@@ -9,8 +9,8 @@ public class ShipFactory {
         this.producesShips = shipsToProduce;
         this.smallestShipSize = smallestShipSize;
     }
-    public Vector<Ship> makeShips() {
-        Vector<Ship> ships = new Vector<>(this.producesShips);
+    public ArrayList<Ship> makeShips() {
+        ArrayList<Ship> ships = new ArrayList<>(this.producesShips);
         int shipsLeft = this.producesShips;
         while (shipsLeft > 0) {
             int shipSize = shipsLeft + this.smallestShipSize - 1;
