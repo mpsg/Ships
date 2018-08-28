@@ -13,14 +13,14 @@ public class PositionedShip {
         this.y = y;
         this.orientation = orientation;
     }
-    public int getX() {
+    int getX() {
         return this.x;
     }
-    public int getY() {
+    int getY() {
         return this.y;
     }
-    public int getOrientation() {
+    int getOrientation() {
         return this.orientation;
     }
-    public Ship getShip() { return this.ship; }
+    Ship getShip() { return this.ship; }
 }

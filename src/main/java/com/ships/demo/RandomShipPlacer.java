@@ -3,12 +3,12 @@ package com.ships.demo;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class RandomShipPlacer extends ShipPlacer {
+class RandomShipPlacer extends ShipPlacer {
     private Random rand = new Random();
-    public RandomShipPlacer(BoardField[][] board) {
+    RandomShipPlacer(BoardField[][] board) {
         super(board);
     }
-    public void placeShipsAtRandom(ArrayList<Ship> ships) {
+    void placeShipsAtRandom(ArrayList<Ship> ships) {
        for (Ship ship : ships) {
            boolean shipPlaced;
            do {

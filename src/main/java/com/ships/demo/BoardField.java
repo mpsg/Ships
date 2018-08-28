@@ -1,13 +1,13 @@
 package com.ships.demo;
 
-public class BoardField {
+class BoardField {
     private boolean fieldDiscovered = false;
     private Ship ship;
-    public BoardField(Ship ship) {
+    BoardField(Ship ship) {
         this.ship = ship;
     }
     //returns true if the ship to which this field belongs was destroyed
-    public boolean isShipDestroyedAfterHit() {
+    boolean isShipDestroyedAfterHit() {
         if (!this.fieldDiscovered) {
             this.fieldDiscovered = true;
             return this.ship.hit();
@@ -16,7 +16,7 @@ public class BoardField {
             return false;
         }
     }
-    public Ship getShip() {
+    Ship getShip() {
         return this.ship;
     }
 }

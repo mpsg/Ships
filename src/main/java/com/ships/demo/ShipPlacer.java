@@ -1,8 +1,8 @@
 package com.ships.demo;
 
-public abstract class ShipPlacer {
+abstract class ShipPlacer {
     protected BoardField[][] board;
-    public ShipPlacer(BoardField[][] board) {
+    ShipPlacer(BoardField[][] board) {
         this.board = board;
     }
     protected void placeShip(Ship ship, int x, int y, int orientation) {
