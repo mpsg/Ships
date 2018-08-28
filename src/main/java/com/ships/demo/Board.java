@@ -1,18 +1,18 @@
 package com.ships.demo;
 
-import java.util.Vector;
+import java.util.ArrayList;
 
 public class Board {
     private BoardField[][] board;
-    private Vector<Ship> ships;
-    public Board(int size) {
+    private ArrayList<Ship> ships;
+    Board(int size) {
         this.board = new BoardField[size][size];
     }
-    public void insertShipsAtRandom(Vector<Ship> ships) {
+    void insertShipsAtRandom(ArrayList<Ship> ships) {
         RandomShipPlacer shipPlacer = new RandomShipPlacer(this.board);
         shipPlacer.placeShipsAtRandom(ships);
     }
-    public void insertShips(Vector<PositionedShip> positionedShips) {
+    public void insertShips(ArrayList<PositionedShip> positionedShips) {
         PositionedShipPlacer shipPlacer = new PositionedShipPlacer(this.board);
         shipPlacer.placePositionedShips(positionedShips);
     }

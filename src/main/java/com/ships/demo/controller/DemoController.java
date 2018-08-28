@@ -15,6 +15,11 @@ public class DemoController {
     public String login() {
         return "Login";
     }
+    @RequestMapping(value="/test")
+    @ResponseBody
+    public String test(@RequestParam("param1") String param1, @RequestParam("param2") String param2) {
+        return param1 + param2;
+    }
     @RequestMapping(value="/testboard")
     @ResponseBody
     public String testboard(@RequestParam("board_size") int boardSize, @RequestParam("ships_num") int shipsNum, @RequestParam("smallest_ship_size") int smallestShipSize) {

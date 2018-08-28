@@ -1,0 +1,2 @@
+netstat -ano | findstr :8080    -> nrproc
+taskkill \PID nrproc \F

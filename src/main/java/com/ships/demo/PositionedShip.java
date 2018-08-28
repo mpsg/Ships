@@ -5,22 +5,21 @@ public class PositionedShip {
     //coordinates of the ship beginning
     private int x;
     private int y;
-    //0 - extends to the right, 1 - to the bottom, 2 - to the left, 3 - towards the top
-    private int orientation;
-    public PositionedShip(Ship ship, int x, int y, int orientation) {
+    private Orientation orientation;
+    public PositionedShip(Ship ship, int x, int y, Orientation orientation) {
         this.ship = ship;
         this.x = x;
         this.y = y;
         this.orientation = orientation;
     }
-    public int getX() {
+    int getX() {
         return this.x;
     }
-    public int getY() {
+    int getY() {
         return this.y;
     }
-    public int getOrientation() {
+    Orientation getOrientation() {
         return this.orientation;
     }
-    public Ship getShip() { return this.ship; }
+    Ship getShip() { return this.ship; }
 }
