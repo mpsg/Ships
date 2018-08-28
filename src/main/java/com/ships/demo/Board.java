@@ -5,10 +5,10 @@ import java.util.ArrayList;
 public class Board {
     private BoardField[][] board;
     private ArrayList<Ship> ships;
-    public Board(int size) {
+    Board(int size) {
         this.board = new BoardField[size][size];
     }
-    public void insertShipsAtRandom(ArrayList<Ship> ships) {
+    void insertShipsAtRandom(ArrayList<Ship> ships) {
         RandomShipPlacer shipPlacer = new RandomShipPlacer(this.board);
         shipPlacer.placeShipsAtRandom(ships);
     }
