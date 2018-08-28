@@ -21,7 +21,7 @@ class RandomShipPlacer extends ShipPlacer {
     private boolean tryToPlaceShip(Ship ship, int x, int y) {
         boolean shipPlaced = false;
         if (this.board[x][y] == null) {
-            int orientation = this.getRandomOrientation();
+            Orientation orientation = Orientation.getRandomOrientation();
             int checkedOrientations = 0;
             do {
                 if (this.checkIfShipWithinBoard(ship.getSize(), x, y, orientation) &&
@@ -30,7 +30,7 @@ class RandomShipPlacer extends ShipPlacer {
                     shipPlaced = true;
                 } else {
                     checkedOrientations++;
-                    orientation = orientation == 3 ? 0 : orientation + 1;
+                    orientation = orientation.getNext();
                 }
             } while (!shipPlaced && checkedOrientations < 4);
         }
@@ -41,9 +41,6 @@ class RandomShipPlacer extends ShipPlacer {
     }
     private int getRandomSecondCoordinate() {
         return this.randInt(this.board[0].length);
-    }
-    private int getRandomOrientation() {
-        return this.randInt(4);
     }
     private int randInt(int bound) {
         return rand.nextInt(bound);

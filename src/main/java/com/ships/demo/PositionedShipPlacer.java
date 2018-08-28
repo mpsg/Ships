@@ -10,7 +10,7 @@ class PositionedShipPlacer extends ShipPlacer {
         for (PositionedShip ship : ships) {
             int x = ship.getX();
             int y = ship.getY();
-            int orientation = ship.getOrientation();
+            Orientation orientation = ship.getOrientation();
             this.placeShip(ship.getShip(), x, y, orientation);
         }
     }
