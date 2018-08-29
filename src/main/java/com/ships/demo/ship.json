@@ -1,0 +1,9 @@
+{
+  "x": 2,
+  "y": 3,
+  "orientation": 0,
+  "ship": {
+    "size": 5,
+    "hitsLeft": 5
+  }
+}

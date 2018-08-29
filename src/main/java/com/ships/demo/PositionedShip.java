@@ -7,6 +7,7 @@ public class PositionedShip {
     private int y;
     //0 - extends to the right, 1 - to the bottom, 2 - to the left, 3 - towards the top
     private int orientation;
+    public PositionedShip() {}
     public PositionedShip(Ship ship, int x, int y, int orientation) {
         this.ship = ship;
         this.x = x;
@@ -23,4 +24,17 @@ public class PositionedShip {
         return this.orientation;
     }
     public Ship getShip() { return this.ship; }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("\n----- Ship Information -----\n");
+        sb.append("x: " + this.getX() + "\n");
+        sb.append("y: " + this.getY() + "\n");
+        sb.append("orientation: " + this.getOrientation() + "\n");
+        sb.append("size: " + this.getShip().getSize() + "\n");
+        sb.append("hits left: " + this.getShip().getHitsLeft() + "\n");
+        sb.append("*****************************");
+        return sb.toString();
+    }
 }
